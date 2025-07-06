@@ -125,14 +125,15 @@ export default function Index() {
         </Badge>
 
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-text-heading mb-6 leading-tight">
-          Legal work can be complex.
+          AI-powered legal workflows.
           <br />
-          Your workflow doesn't have to be.
+          <span className="text-primary-purple">Built for professionals.</span>
         </h1>
 
-        <p className="text-lg md:text-xl text-text-body max-w-3xl mx-auto mb-8 leading-relaxed">
-          Let AI agents handle the heavy lifting. Streamline research, drafting,
-          and form-filling - so you can bill for thinking, not typing.
+        <p className="text-lg md:text-xl text-text-body max-w-2xl mx-auto mb-8 leading-relaxed">
+          Automate research, document generation, and form filling.
+          <br className="hidden md:block" />
+          Bill for thinking, not typing.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -441,7 +442,7 @@ export default function Index() {
                 Enterprise
               </Badge>
               <h2 className="text-3xl md:text-4xl font-bold text-text-heading mb-6">
-                Built for enterprise-scale legal operations
+                Enterprise-scale legal operations
               </h2>
               <p className="text-lg text-text-body mb-6 leading-relaxed">
                 Deploy LegalAI on-premise with complete control over your data,
@@ -658,27 +659,26 @@ export default function Index() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-r from-primary-purple to-primary-purple-dark text-white">
+      <section className="py-16 md:py-24 bg-text-heading">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            The future of legal AI is already here
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
+            Ready to transform your practice?
           </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-            Join thousands of legal professionals who are transforming their
-            practice with AI
+          <p className="text-xl mb-8 max-w-2xl mx-auto text-white/80">
+            Join thousands of legal professionals already using AI to work
+            smarter
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               size="lg"
-              variant="secondary"
-              className="rounded-[14px] text-lg px-8 py-6 bg-white text-primary-purple hover:bg-gray-100"
+              className="rounded-[14px] text-lg px-8 py-6 bg-primary-purple hover:bg-primary-purple-dark text-white shadow-lg"
             >
               Join Waitlist
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="rounded-[14px] text-lg px-8 py-6 border-white text-white hover:bg-white hover:text-primary-purple"
+              className="rounded-[14px] text-lg px-8 py-6 border-white/30 text-white hover:bg-white/10 hover:border-white/50"
             >
               Talk to Founders
             </Button>
