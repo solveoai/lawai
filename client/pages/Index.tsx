@@ -30,6 +30,7 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { HeroVideoDialog } from "@/components/ui/hero-video-dialog";
 
 export default function Index() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -161,11 +162,13 @@ export default function Index() {
 
         {/* Video Demo Placeholder */}
         <div className="relative max-w-4xl mx-auto">
-          <div className="aspect-video bg-gradient-to-br from-primary-purple-light to-primary-purple/10 rounded-[14px] border-2 border-primary-purple/20 flex items-center justify-center group cursor-pointer hover:shadow-xl transition-all duration-300">
-            <div className="bg-primary-purple text-white rounded-full p-6 group-hover:scale-110 transition-transform duration-300">
-              <Play className="h-8 w-8 fill-current" />
-            </div>
-          </div>
+          <HeroVideoDialog
+            animationStyle="from-center"
+            videoSrc="https://www.youtube.com/embed/AZsfXyWpWDs"
+            thumbnailSrc="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+            thumbnailAlt="LegalAI Demo Video"
+            className="aspect-video rounded-[14px] border-2 border-primary-purple/20 hover:shadow-xl transition-all duration-300"
+          />
           <p className="text-sm text-text-body mt-4">
             Watch how LegalAI transforms your workflow
           </p>
