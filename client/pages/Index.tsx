@@ -29,6 +29,7 @@ import {
   AwardIcon as Award,
 } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Index() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -74,9 +75,11 @@ export default function Index() {
             <Button variant="outline" className="rounded-[14px]">
               Talk to Founders
             </Button>
-            <Button className="rounded-[14px] bg-primary-purple hover:bg-primary-purple-dark shadow-lg">
-              Join Waitlist
-            </Button>
+            <Link to="/waitlist">
+              <Button className="rounded-[14px] bg-primary-purple hover:bg-primary-purple-dark shadow-lg">
+                Join Waitlist
+              </Button>
+            </Link>
           </div>
 
           <button
@@ -110,9 +113,11 @@ export default function Index() {
               <Button variant="outline" className="rounded-[14px] w-full">
                 Talk to Founders
               </Button>
-              <Button className="rounded-[14px] bg-primary-purple hover:bg-primary-purple-dark w-full">
-                Join Waitlist
-              </Button>
+              <Link to="/waitlist">
+                <Button className="rounded-[14px] bg-primary-purple hover:bg-primary-purple-dark w-full">
+                  Join Waitlist
+                </Button>
+              </Link>
             </nav>
           </div>
         )}
@@ -137,12 +142,14 @@ export default function Index() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-          <Button
-            size="lg"
-            className="rounded-[14px] bg-primary-purple hover:bg-primary-purple-dark text-lg px-8 py-6 shadow-lg"
-          >
-            Join Waitlist
-          </Button>
+          <Link to="/waitlist">
+            <Button
+              size="lg"
+              className="rounded-[14px] bg-primary-purple hover:bg-primary-purple-dark text-lg px-8 py-6 shadow-lg"
+            >
+              Join Waitlist
+            </Button>
+          </Link>
           <Button
             size="lg"
             variant="outline"
@@ -827,12 +834,14 @@ export default function Index() {
               with AI
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Button
-                size="lg"
-                className="rounded-[14px] text-lg px-10 py-6 bg-primary-purple hover:bg-primary-purple-dark text-white shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
-              >
-                Join Waitlist
-              </Button>
+              <Link to="/waitlist">
+                <Button
+                  size="lg"
+                  className="rounded-[14px] text-lg px-10 py-6 bg-primary-purple hover:bg-primary-purple-dark text-white shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
+                >
+                  Join Waitlist
+                </Button>
+              </Link>
               <Button
                 size="lg"
                 variant="outline"
