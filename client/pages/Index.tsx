@@ -165,7 +165,7 @@ export default function Index() {
           <HeroVideoDialog
             animationStyle="from-center"
             videoSrc="https://www.youtube.com/embed/AZsfXyWpWDs"
-            thumbnailSrc="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+            thumbnailSrc="https://img.youtube.com/vi/AZsfXyWpWDs/maxresdefault.jpg"
             thumbnailAlt="LegalAI Demo Video"
             className="aspect-video rounded-[14px] border-2 border-primary-purple/20 hover:shadow-xl transition-all duration-300"
           />
