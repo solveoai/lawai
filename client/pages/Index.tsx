@@ -659,29 +659,31 @@ export default function Index() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-16 md:py-24 bg-text-heading">
+      <section className="py-20 md:py-32 bg-gradient-to-br from-slate-50 to-white border-t">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
-            Ready to transform your practice?
-          </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto text-white/80">
-            Join thousands of legal professionals already using AI to work
-            smarter
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              size="lg"
-              className="rounded-[14px] text-lg px-8 py-6 bg-primary-purple hover:bg-primary-purple-dark text-white shadow-lg"
-            >
-              Join Waitlist
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="rounded-[14px] text-lg px-8 py-6 border-white/30 text-white hover:bg-white/10 hover:border-white/50"
-            >
-              Talk to Founders
-            </Button>
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl md:text-6xl font-bold mb-8 text-text-heading">
+              Ready to get started?
+            </h2>
+            <p className="text-xl md:text-2xl text-text-body mb-12 max-w-3xl mx-auto leading-relaxed">
+              Join the legal professionals already transforming their practice
+              with AI
+            </p>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <Button
+                size="lg"
+                className="rounded-[14px] text-lg px-10 py-6 bg-primary-purple hover:bg-primary-purple-dark text-white shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
+              >
+                Join Waitlist
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="rounded-[14px] text-lg px-10 py-6 border-2 border-primary-purple text-primary-purple hover:bg-primary-purple hover:text-white transition-all duration-300"
+              >
+                Talk to Founders
+              </Button>
+            </div>
           </div>
         </div>
       </section>
