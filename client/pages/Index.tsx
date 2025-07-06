@@ -365,71 +365,226 @@ export default function Index() {
       </section>
 
       {/* Roadmap Section */}
-      <section id="roadmap" className="py-20 md:py-32 bg-white">
-        <div className="container mx-auto px-4">
+      <section id="roadmap" className="py-20 md:py-32 relative overflow-hidden">
+        {/* Animated Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-purple/5 via-white to-primary-purple-light/20"></div>
+        <div className="absolute top-20 left-10 w-72 h-72 bg-primary-purple/10 rounded-full blur-3xl opacity-20 animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary-purple-light/30 rounded-full blur-3xl opacity-30 animate-pulse"></div>
+
+        <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-20">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-purple/10 rounded-full mb-6">
-              <div className="w-2 h-2 bg-primary-purple rounded-full"></div>
-              <span className="text-sm font-medium text-primary-purple">
-                Coming Soon
+            <div className="inline-flex items-center gap-3 px-6 py-3 bg-white/80 backdrop-blur-sm rounded-full border border-primary-purple/20 shadow-lg mb-8">
+              <div className="flex gap-1">
+                <div className="w-2 h-2 bg-primary-purple rounded-full animate-pulse"></div>
+                <div
+                  className="w-2 h-2 bg-primary-purple/60 rounded-full animate-pulse"
+                  style={{ animationDelay: "0.2s" }}
+                ></div>
+                <div
+                  className="w-2 h-2 bg-primary-purple/30 rounded-full animate-pulse"
+                  style={{ animationDelay: "0.4s" }}
+                ></div>
+              </div>
+              <span className="text-sm font-semibold text-primary-purple tracking-wide">
+                INNOVATION PIPELINE
               </span>
             </div>
-            <h2 className="text-4xl md:text-6xl font-bold text-text-heading mb-6 leading-tight">
-              What's next?
+            <h2 className="text-5xl md:text-7xl font-bold text-text-heading mb-8 leading-tight">
+              Beyond today's
+              <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-purple to-primary-purple-dark">
+                impossible
+              </span>
             </h2>
-            <p className="text-xl text-text-body max-w-2xl mx-auto leading-relaxed">
-              Expanding our AI capabilities to cover every aspect of legal work
+            <p className="text-xl text-text-body max-w-3xl mx-auto leading-relaxed">
+              Pioneering the next generation of legal AI technology
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="group relative bg-gradient-to-br from-slate-50 to-white rounded-2xl p-8 border border-slate-200 hover:border-primary-purple/30 hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
-              <div className="w-12 h-12 bg-primary-purple/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary-purple/20 transition-colors duration-300">
-                <MessageSquare className="h-6 w-6 text-primary-purple" />
+          {/* Timeline Design */}
+          <div className="relative max-w-6xl mx-auto">
+            {/* Central Timeline Line */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-primary-purple via-primary-purple/50 to-transparent hidden lg:block"></div>
+
+            {/* Timeline Items */}
+            <div className="space-y-16 lg:space-y-24">
+              {/* Item 1 - Left */}
+              <div className="lg:flex lg:items-center lg:justify-between">
+                <div className="lg:w-5/12 lg:text-right lg:pr-12">
+                  <div className="group relative bg-white/80 backdrop-blur-sm rounded-3xl p-8 border border-primary-purple/20 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 hover:rotate-1">
+                    <div className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-br from-primary-purple to-primary-purple-dark rounded-full flex items-center justify-center shadow-lg">
+                      <MessageSquare className="h-4 w-4 text-white" />
+                    </div>
+                    <div className="text-right">
+                      <h3 className="text-2xl font-bold text-text-heading mb-4">
+                        Conversational Legal AI
+                      </h3>
+                      <p className="text-text-body leading-relaxed mb-4">
+                        Natural language interface that understands legal
+                        context and provides instant, intelligent responses to
+                        complex queries.
+                      </p>
+                      <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-purple/10 rounded-full">
+                        <span className="text-sm font-medium text-primary-purple">
+                          Q2 2024
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="hidden lg:block lg:w-2/12 text-center">
+                  <div className="w-6 h-6 bg-primary-purple rounded-full mx-auto shadow-lg"></div>
+                </div>
+                <div className="lg:w-5/12"></div>
               </div>
-              <h3 className="text-xl font-bold text-text-heading mb-3">
-                AI Chat
-              </h3>
-              <p className="text-text-body leading-relaxed">
-                Natural conversations for instant legal insights and guidance
-              </p>
+
+              {/* Item 2 - Right */}
+              <div className="lg:flex lg:items-center lg:justify-between">
+                <div className="lg:w-5/12"></div>
+                <div className="hidden lg:block lg:w-2/12 text-center">
+                  <div className="w-6 h-6 bg-primary-purple rounded-full mx-auto shadow-lg"></div>
+                </div>
+                <div className="lg:w-5/12 lg:pl-12">
+                  <div className="group relative bg-white/80 backdrop-blur-sm rounded-3xl p-8 border border-primary-purple/20 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 hover:-rotate-1">
+                    <div className="absolute -top-4 -left-4 w-8 h-8 bg-gradient-to-br from-primary-purple to-primary-purple-dark rounded-full flex items-center justify-center shadow-lg">
+                      <UserMinus className="h-4 w-4 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-text-heading mb-4">
+                      Smart Redaction Engine
+                    </h3>
+                    <p className="text-text-body leading-relaxed mb-4">
+                      AI-powered privacy protection that automatically
+                      identifies and redacts sensitive information across all
+                      document types.
+                    </p>
+                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-purple/10 rounded-full">
+                      <span className="text-sm font-medium text-primary-purple">
+                        Q3 2024
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Item 3 - Left */}
+              <div className="lg:flex lg:items-center lg:justify-between">
+                <div className="lg:w-5/12 lg:text-right lg:pr-12">
+                  <div className="group relative bg-white/80 backdrop-blur-sm rounded-3xl p-8 border border-primary-purple/20 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 hover:rotate-1">
+                    <div className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-br from-primary-purple to-primary-purple-dark rounded-full flex items-center justify-center shadow-lg">
+                      <BarChart3 className="h-4 w-4 text-white" />
+                    </div>
+                    <div className="text-right">
+                      <h3 className="text-2xl font-bold text-text-heading mb-4">
+                        Predictive Risk Analytics
+                      </h3>
+                      <p className="text-text-body leading-relaxed mb-4">
+                        Advanced machine learning models that predict case
+                        outcomes and identify potential legal risks before they
+                        become problems.
+                      </p>
+                      <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-purple/10 rounded-full">
+                        <span className="text-sm font-medium text-primary-purple">
+                          Q4 2024
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="hidden lg:block lg:w-2/12 text-center">
+                  <div className="w-6 h-6 bg-primary-purple rounded-full mx-auto shadow-lg"></div>
+                </div>
+                <div className="lg:w-5/12"></div>
+              </div>
+
+              {/* Item 4 - Right */}
+              <div className="lg:flex lg:items-center lg:justify-between">
+                <div className="lg:w-5/12"></div>
+                <div className="hidden lg:block lg:w-2/12 text-center">
+                  <div className="w-6 h-6 bg-primary-purple/60 rounded-full mx-auto shadow-lg"></div>
+                </div>
+                <div className="lg:w-5/12 lg:pl-12">
+                  <div className="group relative bg-white/60 backdrop-blur-sm rounded-3xl p-8 border border-primary-purple/20 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 hover:-rotate-1 opacity-80">
+                    <div className="absolute -top-4 -left-4 w-8 h-8 bg-gradient-to-br from-primary-purple/60 to-primary-purple-dark/60 rounded-full flex items-center justify-center shadow-lg">
+                      <Link2 className="h-4 w-4 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-text-heading mb-4">
+                      Universal Integrations
+                    </h3>
+                    <p className="text-text-body leading-relaxed mb-4">
+                      Seamless connectivity with every major legal platform,
+                      creating a unified AI-powered legal ecosystem.
+                    </p>
+                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-purple/10 rounded-full">
+                      <span className="text-sm font-medium text-primary-purple">
+                        2025
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div className="group relative bg-gradient-to-br from-slate-50 to-white rounded-2xl p-8 border border-slate-200 hover:border-primary-purple/30 hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
-              <div className="w-12 h-12 bg-primary-purple/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary-purple/20 transition-colors duration-300">
-                <UserMinus className="h-6 w-6 text-primary-purple" />
+            {/* Mobile Timeline */}
+            <div className="lg:hidden space-y-8">
+              <div className="relative bg-white/80 backdrop-blur-sm rounded-3xl p-6 border border-primary-purple/20 shadow-xl">
+                <MessageSquare className="h-8 w-8 text-primary-purple mb-4" />
+                <h3 className="text-xl font-bold text-text-heading mb-3">
+                  Conversational Legal AI
+                </h3>
+                <p className="text-text-body mb-4">
+                  Natural language interface for instant legal insights.
+                </p>
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary-purple/10 rounded-full">
+                  <span className="text-xs font-medium text-primary-purple">
+                    Q2 2024
+                  </span>
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-text-heading mb-3">
-                Auto-Redact
-              </h3>
-              <p className="text-text-body leading-relaxed">
-                Intelligent redaction of sensitive information across all
-                documents
-              </p>
-            </div>
 
-            <div className="group relative bg-gradient-to-br from-slate-50 to-white rounded-2xl p-8 border border-slate-200 hover:border-primary-purple/30 hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
-              <div className="w-12 h-12 bg-primary-purple/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary-purple/20 transition-colors duration-300">
-                <BarChart3 className="h-6 w-6 text-primary-purple" />
+              <div className="relative bg-white/80 backdrop-blur-sm rounded-3xl p-6 border border-primary-purple/20 shadow-xl">
+                <UserMinus className="h-8 w-8 text-primary-purple mb-4" />
+                <h3 className="text-xl font-bold text-text-heading mb-3">
+                  Smart Redaction Engine
+                </h3>
+                <p className="text-text-body mb-4">
+                  AI-powered privacy protection across all documents.
+                </p>
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary-purple/10 rounded-full">
+                  <span className="text-xs font-medium text-primary-purple">
+                    Q3 2024
+                  </span>
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-text-heading mb-3">
-                Risk Analysis
-              </h3>
-              <p className="text-text-body leading-relaxed">
-                Advanced analytics to identify risks and opportunities
-              </p>
-            </div>
 
-            <div className="group relative bg-gradient-to-br from-slate-50 to-white rounded-2xl p-8 border border-slate-200 hover:border-primary-purple/30 hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
-              <div className="w-12 h-12 bg-primary-purple/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary-purple/20 transition-colors duration-300">
-                <Link2 className="h-6 w-6 text-primary-purple" />
+              <div className="relative bg-white/80 backdrop-blur-sm rounded-3xl p-6 border border-primary-purple/20 shadow-xl">
+                <BarChart3 className="h-8 w-8 text-primary-purple mb-4" />
+                <h3 className="text-xl font-bold text-text-heading mb-3">
+                  Predictive Risk Analytics
+                </h3>
+                <p className="text-text-body mb-4">
+                  Machine learning models for case outcome prediction.
+                </p>
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary-purple/10 rounded-full">
+                  <span className="text-xs font-medium text-primary-purple">
+                    Q4 2024
+                  </span>
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-text-heading mb-3">
-                Integrations
-              </h3>
-              <p className="text-text-body leading-relaxed">
-                Seamless workflow integration with your existing tools
-              </p>
+
+              <div className="relative bg-white/60 backdrop-blur-sm rounded-3xl p-6 border border-primary-purple/20 shadow-xl opacity-80">
+                <Link2 className="h-8 w-8 text-primary-purple/60 mb-4" />
+                <h3 className="text-xl font-bold text-text-heading mb-3">
+                  Universal Integrations
+                </h3>
+                <p className="text-text-body mb-4">
+                  Seamless connectivity with every major legal platform.
+                </p>
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary-purple/10 rounded-full">
+                  <span className="text-xs font-medium text-primary-purple">
+                    2025
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
