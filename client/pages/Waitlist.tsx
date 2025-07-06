@@ -93,18 +93,8 @@ export default function Waitlist() {
           <div className="text-center mb-12">
             {/* Logo and Branding */}
             <div className="flex items-center justify-center gap-3 mb-8">
-              <div className="relative">
-                <Gavel className="h-12 w-12 text-primary-purple" />
-                <div className="absolute -top-1 -right-1 w-4 h-4 bg-primary-purple-light rounded-full flex items-center justify-center">
-                  <div className="w-2 h-2 bg-primary-purple rounded-full animate-pulse"></div>
-                </div>
-              </div>
-              <div>
-                <h1 className="text-2xl font-bold text-text-heading">
-                  LegalAI
-                </h1>
-                <p className="text-sm text-text-body">Early Access Program</p>
-              </div>
+              <Gavel className="h-10 w-10 text-primary-purple" />
+              <h1 className="text-2xl font-bold text-text-heading">LegalAI</h1>
             </div>
 
             <Badge className="mb-6 bg-primary-purple-light text-primary-purple border-primary-purple/20 px-4 py-2">
@@ -126,42 +116,31 @@ export default function Waitlist() {
           </div>
 
           {/* Waitlist Form */}
-          <Card className="max-w-2xl mx-auto bg-white/80 backdrop-blur-sm border-primary-purple/20 shadow-2xl">
-            <CardContent className="p-8 md:p-12">
+          <Card className="max-w-lg mx-auto bg-white/90 backdrop-blur-sm border-primary-purple/20 shadow-xl">
+            <CardContent className="p-8">
               <div className="text-center mb-8">
-                <Scale className="h-16 w-16 text-primary-purple mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-text-heading mb-3">
                   Reserve your spot
                 </h3>
                 <p className="text-text-body">
-                  Join 4,000+ legal professionals already on the waitlist
+                  Join 4,000+ legal professionals on the waitlist
                 </p>
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="relative">
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-semibold text-text-heading mb-3"
-                  >
-                    Professional Email Address
-                  </label>
                   <div className="relative">
                     <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-text-body" />
                     <Input
                       id="email"
                       type="email"
-                      placeholder="partner@lawfirm.com"
+                      placeholder="your-email@lawfirm.com"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       className="pl-12 h-14 text-lg rounded-[14px] border-2 border-primary-purple/20 focus:border-primary-purple bg-white/50 backdrop-blur-sm"
                       required
                     />
                   </div>
-                  <p className="text-sm text-text-body mt-2">
-                    We only accept applications from verified legal
-                    professionals
-                  </p>
                 </div>
 
                 <Button
@@ -176,66 +155,71 @@ export default function Waitlist() {
                       Joining waitlist...
                     </div>
                   ) : (
-                    "Join Exclusive Waitlist"
+                    "Join Waitlist"
                   )}
                 </Button>
 
-                <div className="grid md:grid-cols-3 gap-4 pt-6 border-t border-primary-purple/10">
-                  <div className="text-center">
-                    <div className="w-10 h-10 bg-primary-purple/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                      <Shield className="h-5 w-5 text-primary-purple" />
-                    </div>
-                    <p className="text-sm font-medium text-text-heading">
-                      Enterprise Security
-                    </p>
-                    <p className="text-xs text-text-body">
-                      SOC 2 & HIPAA compliant
-                    </p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-10 h-10 bg-primary-purple/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                      <Scale className="h-5 w-5 text-primary-purple" />
-                    </div>
-                    <p className="text-sm font-medium text-text-heading">
-                      Legal-First Design
-                    </p>
-                    <p className="text-xs text-text-body">
-                      Built by legal experts
-                    </p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-10 h-10 bg-primary-purple/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                      <Gavel className="h-5 w-5 text-primary-purple" />
-                    </div>
-                    <p className="text-sm font-medium text-text-heading">
-                      Exclusive Access
-                    </p>
-                    <p className="text-xs text-text-body">
-                      Beta features first
-                    </p>
-                  </div>
-                </div>
+                <p className="text-sm text-text-body text-center">
+                  For verified legal professionals only
+                </p>
               </form>
             </CardContent>
           </Card>
 
-          {/* Trust Indicators */}
-          <div className="text-center mt-12">
-            <p className="text-sm text-text-body mb-6">
-              Trusted by legal professionals at
+          {/* Trust Indicators - Logo Marquee */}
+          <div className="mt-16">
+            <p className="text-sm text-text-body text-center mb-8">
+              Trusted by legal professionals worldwide
             </p>
-            <div className="flex flex-wrap items-center justify-center gap-8 opacity-60">
-              <div className="text-text-body font-semibold">
-                BigLaw Partners
-              </div>
-              <div className="text-text-body font-semibold">
-                Solo Practitioners
-              </div>
-              <div className="text-text-body font-semibold">
-                Legal Tech Leaders
-              </div>
-              <div className="text-text-body font-semibold">
-                Corporate Counsel
+            <div className="relative overflow-hidden">
+              <div className="flex animate-marquee space-x-12 items-center">
+                {/* Logo placeholders */}
+                <div className="flex items-center justify-center h-12 w-32 bg-slate-100 rounded-lg opacity-60">
+                  <span className="text-sm font-semibold text-slate-600">
+                    Kirkland & Ellis
+                  </span>
+                </div>
+                <div className="flex items-center justify-center h-12 w-32 bg-slate-100 rounded-lg opacity-60">
+                  <span className="text-sm font-semibold text-slate-600">
+                    Latham & Watkins
+                  </span>
+                </div>
+                <div className="flex items-center justify-center h-12 w-32 bg-slate-100 rounded-lg opacity-60">
+                  <span className="text-sm font-semibold text-slate-600">
+                    Baker McKenzie
+                  </span>
+                </div>
+                <div className="flex items-center justify-center h-12 w-32 bg-slate-100 rounded-lg opacity-60">
+                  <span className="text-sm font-semibold text-slate-600">
+                    DLA Piper
+                  </span>
+                </div>
+                <div className="flex items-center justify-center h-12 w-32 bg-slate-100 rounded-lg opacity-60">
+                  <span className="text-sm font-semibold text-slate-600">
+                    Skadden
+                  </span>
+                </div>
+                <div className="flex items-center justify-center h-12 w-32 bg-slate-100 rounded-lg opacity-60">
+                  <span className="text-sm font-semibold text-slate-600">
+                    White & Case
+                  </span>
+                </div>
+                {/* Duplicate for seamless loop */}
+                <div className="flex items-center justify-center h-12 w-32 bg-slate-100 rounded-lg opacity-60">
+                  <span className="text-sm font-semibold text-slate-600">
+                    Kirkland & Ellis
+                  </span>
+                </div>
+                <div className="flex items-center justify-center h-12 w-32 bg-slate-100 rounded-lg opacity-60">
+                  <span className="text-sm font-semibold text-slate-600">
+                    Latham & Watkins
+                  </span>
+                </div>
+                <div className="flex items-center justify-center h-12 w-32 bg-slate-100 rounded-lg opacity-60">
+                  <span className="text-sm font-semibold text-slate-600">
+                    Baker McKenzie
+                  </span>
+                </div>
               </div>
             </div>
           </div>
