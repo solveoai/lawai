@@ -365,70 +365,72 @@ export default function Index() {
       </section>
 
       {/* Roadmap Section */}
-      <section
-        id="roadmap"
-        className="py-16 md:py-24 bg-primary-purple-light/30"
-      >
+      <section id="roadmap" className="py-20 md:py-32 bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <Badge className="mb-4 bg-primary-purple-light text-primary-purple border-primary-purple/20">
-              Roadmap
-            </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold text-text-heading mb-6">
-              The future of legal AI is already here
+          <div className="text-center mb-20">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-purple/10 rounded-full mb-6">
+              <div className="w-2 h-2 bg-primary-purple rounded-full"></div>
+              <span className="text-sm font-medium text-primary-purple">
+                Coming Soon
+              </span>
+            </div>
+            <h2 className="text-4xl md:text-6xl font-bold text-text-heading mb-6 leading-tight">
+              What's next?
             </h2>
-            <p className="text-lg text-text-body max-w-2xl mx-auto">
-              See what's coming next in our mission to revolutionize legal
-              workflows
+            <p className="text-xl text-text-body max-w-2xl mx-auto leading-relaxed">
+              Expanding our AI capabilities to cover every aspect of legal work
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Card className="p-6 hover:shadow-lg transition-all duration-300 border-2 border-primary-purple/10">
-              <CardContent className="p-0">
-                <MessageSquare className="h-8 w-8 text-primary-purple mb-4" />
-                <h3 className="font-semibold text-text-heading mb-2">Chat</h3>
-                <p className="text-text-body text-sm">
-                  Conversational interface for natural language legal queries
-                </p>
-              </CardContent>
-            </Card>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="group relative bg-gradient-to-br from-slate-50 to-white rounded-2xl p-8 border border-slate-200 hover:border-primary-purple/30 hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
+              <div className="w-12 h-12 bg-primary-purple/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary-purple/20 transition-colors duration-300">
+                <MessageSquare className="h-6 w-6 text-primary-purple" />
+              </div>
+              <h3 className="text-xl font-bold text-text-heading mb-3">
+                AI Chat
+              </h3>
+              <p className="text-text-body leading-relaxed">
+                Natural conversations for instant legal insights and guidance
+              </p>
+            </div>
 
-            <Card className="p-6 hover:shadow-lg transition-all duration-300 border-2 border-primary-purple/10">
-              <CardContent className="p-0">
-                <UserMinus className="h-8 w-8 text-primary-purple mb-4" />
-                <h3 className="font-semibold text-text-heading mb-2">
-                  Anonymize
-                </h3>
-                <p className="text-text-body text-sm">
-                  Automatically redact sensitive information from documents
-                </p>
-              </CardContent>
-            </Card>
+            <div className="group relative bg-gradient-to-br from-slate-50 to-white rounded-2xl p-8 border border-slate-200 hover:border-primary-purple/30 hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
+              <div className="w-12 h-12 bg-primary-purple/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary-purple/20 transition-colors duration-300">
+                <UserMinus className="h-6 w-6 text-primary-purple" />
+              </div>
+              <h3 className="text-xl font-bold text-text-heading mb-3">
+                Auto-Redact
+              </h3>
+              <p className="text-text-body leading-relaxed">
+                Intelligent redaction of sensitive information across all
+                documents
+              </p>
+            </div>
 
-            <Card className="p-6 hover:shadow-lg transition-all duration-300 border-2 border-primary-purple/10">
-              <CardContent className="p-0">
-                <BarChart3 className="h-8 w-8 text-primary-purple mb-4" />
-                <h3 className="font-semibold text-text-heading mb-2">
-                  Analyze
-                </h3>
-                <p className="text-text-body text-sm">
-                  Deep document analysis with risk assessment and insights
-                </p>
-              </CardContent>
-            </Card>
+            <div className="group relative bg-gradient-to-br from-slate-50 to-white rounded-2xl p-8 border border-slate-200 hover:border-primary-purple/30 hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
+              <div className="w-12 h-12 bg-primary-purple/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary-purple/20 transition-colors duration-300">
+                <BarChart3 className="h-6 w-6 text-primary-purple" />
+              </div>
+              <h3 className="text-xl font-bold text-text-heading mb-3">
+                Risk Analysis
+              </h3>
+              <p className="text-text-body leading-relaxed">
+                Advanced analytics to identify risks and opportunities
+              </p>
+            </div>
 
-            <Card className="p-6 hover:shadow-lg transition-all duration-300 border-2 border-primary-purple/10">
-              <CardContent className="p-0">
-                <Link2 className="h-8 w-8 text-primary-purple mb-4" />
-                <h3 className="font-semibold text-text-heading mb-2">
-                  Integrations
-                </h3>
-                <p className="text-text-body text-sm">
-                  Seamless connections with your existing legal software
-                </p>
-              </CardContent>
-            </Card>
+            <div className="group relative bg-gradient-to-br from-slate-50 to-white rounded-2xl p-8 border border-slate-200 hover:border-primary-purple/30 hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
+              <div className="w-12 h-12 bg-primary-purple/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary-purple/20 transition-colors duration-300">
+                <Link2 className="h-6 w-6 text-primary-purple" />
+              </div>
+              <h3 className="text-xl font-bold text-text-heading mb-3">
+                Integrations
+              </h3>
+              <p className="text-text-body leading-relaxed">
+                Seamless workflow integration with your existing tools
+              </p>
+            </div>
           </div>
         </div>
       </section>
